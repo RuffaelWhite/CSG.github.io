@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CyberShield Guardian - Dashboard</title>
+  <link href="assets/css/styles.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="sidebar">
+    <h1 class="p-4 text-white text-2xl font-semibold">CyberShield</h1>
+    <nav>
+      <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+      <a href="tools.html"><i class="fas fa-shield-alt"></i> Cybersecurity Tools</a>
+      <a href="courses.html"><i class="fas fa-book"></i> Courses</a>
+      <a href="upload.html"><i class="fas fa-upload"></i> Upload</a>
+      <a href="certificates.html"><i class="fas fa-certificate"></i> Certificates</a>
+      <a href="store.html"><i class="fas fa-store"></i> Store</a>
+    </nav>
+    <div class="p-4 border-t border-gray-700 flex items-center">
+      <img class="h-10 w-10 rounded-full mr-3" src="https://i.pravatar.cc/40" alt="User avatar" />
+      <div>
+        <p class="text-white text-sm font-semibold">Admin User</p>
+        <p class="text-gray-400 text-xs">Administrator</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <header class="topbar">
+      <h2>Dashboard</h2>
+      <div>
+        <button aria-label="Notifications"><i class="fas fa-bell"></i></button>
+        <button aria-label="User Profile"><i class="fas fa-user-circle"></i></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h3>Welcome to CyberShield Guardian</h3>
+        <p>Protecting you with 100+ cybersecurity tools and resources.</p>
+      </section>
+
+      <section class="card">
+        <h3>Latest Courses</h3>
+        <ul>
+          <li>Introduction to Cybersecurity</li>
+          <li>Network Security Basics</li>
+          <li>Ethical Hacking Fundamentals</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Quick Actions</h3>
+        <button class="button-primary">Explore Tools</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
