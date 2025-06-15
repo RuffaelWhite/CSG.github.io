@@ -1,22 +1,21 @@
 import express from 'express';
-import Stripe from 'stripe';
 import { verifyUser } from '../middleware/authMiddleware.js';
+import Stripe from 'stripe';
+import { STRIPE_API_KEY } from '../config.js';
 
 const router = express.Router();
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = new Stripe(STRIPE_API_KEY);
 
-// Create payment intent
 router.post('/create-payment-intent', verifyUser, async (req, res) => {
-  const { amount, currency = 'usd' } = req.body;
+  const { amount, currency } = req.body;
   try {
     const paymentIntent = await stripe.paymentIntents.create({
       amount,
       currency,
-      payment_method_types: ['card'],
     });
     res.json({ clientSecret: paymentIntent.client_secret });
   } catch (error) {
-    res.status(500).json({ message: 'Error creating payment intent', error });
+    res.status(500).json({ error: error.message });
   }
 });
 
